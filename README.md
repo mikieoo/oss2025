@@ -22,5 +22,6 @@ $E=mc^2$
 > "The computer was born to solve problems that did not exist before" - Bill Gates, Microsoft founder and former CEO, philanthropist
 
 동아대학교 홈페이지는 [여기](https://www.donga.ac.kr)로  
+
 ![donga-image](https://wwwold.donga.ac.kr/Web2017/Sub/001004001_2021_symbol.jpg)
 
