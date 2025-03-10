@@ -16,3 +16,5 @@
 - [] 내일의 할일
 
 $E=mc^2$
+
+> "The computer was born to solve problems that did not exist before" - Bill Gates, Microsoft founder and former CEO, philanthropist
