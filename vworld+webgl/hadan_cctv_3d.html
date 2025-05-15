@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>pydeck</title>
+        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <script src='https://cdn.jsdelivr.net/npm/@deck.gl/jupyter-widget@~9.0.*/dist/index.js'></script>
+    <style>
+    body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#deck-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#deck-container canvas {
+  z-index: 1;
+  background: none;
+}
+    </style>
+  </head>
+  <body>
+    <div id="deck-container">
+    </div>
+  </body>
+  <script>
+    const container = document.getElementById('deck-container');
+    const jsonInput = {
+  "initialViewState": {
+    "latitude": 35.072,
+    "longitude": 128.954,
+    "pitch": 45,
+    "zoom": 14
+  },
+  "layers": [
+    {
+      "@@type": "ColumnLayer",
+      "autoHighlight": true,
+      "data": [
+        {
+          "height": 100,
+          "lat": 35.07994,
+          "lon": 128.96851,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08026,
+          "lon": 128.96837,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08026,
+          "lon": 128.96837,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08217,
+          "lon": 128.96599,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08052,
+          "lon": 128.95295,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08117,
+          "lon": 128.95544,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07889,
+          "lon": 128.96566,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08004,
+          "lon": 128.96666,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07717,
+          "lon": 128.96261,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07717,
+          "lon": 128.96261,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07704,
+          "lon": 128.96297,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08392,
+          "lon": 128.96883,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08392,
+          "lon": 128.96883,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07894,
+          "lon": 128.96475,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07894,
+          "lon": 128.96475,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07894,
+          "lon": 128.96475,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07894,
+          "lon": 128.96475,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07955,
+          "lon": 128.9648,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08123,
+          "lon": 128.96712,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08123,
+          "lon": 128.96712,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08123,
+          "lon": 128.96712,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08123,
+          "lon": 128.96712,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07883,
+          "lon": 128.95837,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07883,
+          "lon": 128.95837,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07883,
+          "lon": 128.95837,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07955,
+          "lon": 128.9648,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08126,
+          "lon": 128.96538,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08077,
+          "lon": 128.95712,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08077,
+          "lon": 128.95712,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08077,
+          "lon": 128.95712,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08369,
+          "lon": 128.96759,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08369,
+          "lon": 128.96759,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08369,
+          "lon": 128.96759,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08369,
+          "lon": 128.96759,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08429,
+          "lon": 128.96674,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08429,
+          "lon": 128.96674,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08429,
+          "lon": 128.96674,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08062,
+          "lon": 128.96529,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08057,
+          "lon": 128.96134,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07866,
+          "lon": 128.96992,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07893,
+          "lon": 128.96755,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07893,
+          "lon": 128.96755,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08183,
+          "lon": 128.95772,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08183,
+          "lon": 128.95772,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07716,
+          "lon": 128.96115,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07991,
+          "lon": 128.96723,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.06122,
+          "lon": 128.96107,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.06133,
+          "lon": 128.96206,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.06129,
+          "lon": 128.9625,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.06161,
+          "lon": 128.96242,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07717,
+          "lon": 128.96115,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07232,
+          "lon": 128.95531,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07763,
+          "lon": 128.96736,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08461,
+          "lon": 128.968,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08151,
+          "lon": 128.96283,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07992,
+          "lon": 128.96915,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07975,
+          "lon": 128.96759,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08081,
+          "lon": 128.96699,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08116,
+          "lon": 128.96933,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08306,
+          "lon": 128.96746,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08247,
+          "lon": 128.96912,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08075,
+          "lon": 128.96635,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08027,
+          "lon": 128.96939,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07803,
+          "lon": 128.96201,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08012,
+          "lon": 128.966,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.06247,
+          "lon": 128.9595,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07927,
+          "lon": 128.96951,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.07942,
+          "lon": 128.96763,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08003,
+          "lon": 128.96793,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08066,
+          "lon": 128.96874,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08042,
+          "lon": 128.96332,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08016,
+          "lon": 128.96733,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08062,
+          "lon": 128.96567,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08134,
+          "lon": 128.9666,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08122,
+          "lon": 128.96589,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08181,
+          "lon": 128.96561,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        },
+        {
+          "height": 100,
+          "lat": 35.08109,
+          "lon": 128.96498,
+          "name": "\ubd80\uc0b0\uad11\uc5ed\uc2dc \uc0ac\ud558\uad6c\uccad \ub2e4\ubaa9\uc801"
+        }
+      ],
+      "elevationScale": 1,
+      "getElevation": "@@=height",
+      "getFillColor": "@@=[200, 30, 0, 160]",
+      "getPosition": "@@=[lon, lat]",
+      "id": "d59b9c53-8a32-4970-acf1-1a86901895ce",
+      "pickable": true,
+      "radius": 50
+    }
+  ],
+  "mapProvider": "carto",
+  "mapStyle": "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
+  "views": [
+    {
+      "@@type": "MapView",
+      "controller": true
+    }
+  ]
+};
+    const tooltip = {'text': 'CCTV: {name}'};
+    const customLibraries = null;
+    const configuration = null;
+
+    const deckInstance = createDeck({
+                  container,
+      jsonInput,
+      tooltip,
+      customLibraries,
+      configuration
+    });
+
+  </script>
+</html>
